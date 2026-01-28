@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO-TRONICS 2026 | National Level Hackathon</title>
+    <meta name="description"
+        content="National Level Hackathon Competition organized by SRM Institute of Science and Technology, Ramapuram. Innovation, Sustainability, Electronics.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="boot-sphere"></div>
+    </div>
+
+    <!-- Background Glow Blobs -->
+    <div class="bg-glow glow-top-right"></div>
+    <div class="bg-glow glow-center"></div>
+    <div class="bg-glow glow-bottom-left"></div>
+
+    <!-- Floating Streaks for Hero -->
+    <div id="hero-streaks"></div>
+
+    <!-- Navigation -->
+    <nav class="glass"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 95%; max-width: 1200px; padding: 15px 30px; border-radius: 20px; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo"
+            style="font-family: 'Outfit'; font-weight: 800; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+            <div
+                style="width: 32px; height: 32px; background: var(--primary-glow); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="cpu" style="color: black; width: 18px;"></i>
+            </div>
+            <span>ECO-<span class="gradient-text">TRONICS</span></span>
+        </div>
+        <div class="nav-links" style="display: flex; gap: 30px; align-items: center;">
+            <a href="#about" class="nav-link"
+                style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">About</a>
+            <a href="#events" class="nav-link"
+                style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Events</a>
+            <a href="#sponsorship" class="nav-link"
+                style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Sponsors</a>
+            <a href="#tiers" class="nav-link"
+                style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Tiers</a>
+            <a href="#contact" class="nav-link"
+                style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Contact</a>
+            <a href="#" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Register Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero"
+        style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 100px; position: relative; overflow: hidden;">
+        <!-- Digital Network Sphere in background (will be simulated via canvas/JS) -->
+        <div id="hero-content" class="boot-hidden">
+            <span class="badge">National Level Hackathon Competition</span>
+            <h1 class="light-sweep"
+                style="font-size: clamp(3.5rem, 12vw, 7rem); line-height: 0.9; margin-bottom: 24px; max-width: 1200px;">
+                ECO-<span class="gradient-text">TRONICS</span>
+            </h1>
+            <p
+                style="font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 40px; font-weight: 500;">
+                Organized by the Department of Electronics and Communication Engineering, <br>
+                <span style="color: var(--soft-mint);">SRM Institute of Science and Technology, Ramapuram.</span>
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary">Register Now <i data-lucide="arrow-right"></i></a>
+                <a href="#sponsorship" class="btn btn-secondary">Become a Sponsor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Sections -->
+    <section id="about">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <!-- About SRM -->
+            <div class="glass" style="padding: 50px; border-radius: 32px;">
+                <span class="badge" style="background: rgba(124, 255, 178, 0.05);">Our Legacy</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">About <span class="gradient-text">SRM IST</span>
+                </h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                    SRM Institute of Science and Technology, Ramapuram Campus is a premier academic institution in
+                    Chennai known for engineering excellence, innovation, research, and industry collaboration. It
+                    nurtures 25,000+ students through industry-aligned curriculum and holds an A++ NAAC accreditation
+                    with strong placement records and entrepreneurial culture.
+                </p>
+            </div>
+            <!-- About TEXUS -->
+            <div class="glass" style="padding: 50px; border-radius: 32px;">
+                <span class="badge" style="background: rgba(124, 255, 178, 0.05);">The Flagship Fest</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">About <span class="gradient-text">TEXUS</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                    TEXUS is the annual flagship technical fest of SRM IST Ramapuram, bringing students from diverse
+                    institutions together to celebrate technology, innovation, and engineering excellence. It features
+                    competitions, hackathons, and workshops promoting problem-solving and real-world engineering
+                    applications.
+                </p>
+            </div>
+        </div>
+
+        <!-- About ECO-TRONICS -->
+        <div class="glass"
+            style="margin-top: 40px; padding: 60px; border-radius: 32px; position: relative; overflow: hidden;">
+            <div class="circuit-bg"></div>
+            <div style="max-width: 900px; position: relative; z-index: 1;">
+                <span class="badge" style="background: rgba(34, 255, 136, 0.1);">Main Event</span>
+                <h2 style="font-size: 3rem; margin-bottom: 25px;">The <span class="gradient-text">ECO-TRONICS</span>
+                    Hackathon</h2>
+                <p style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8;">
+                    ECO-TRONICS is a national-level hackathon competition under TEXUS, focused on electronics,
+                    sustainability, innovation, and real-world tech problem solving. It challenge young minds to bridge
+                    the gap between complex hardware systems and eco-friendly solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Event Ecosystem Section -->
+        <div id="events" style="margin-top: 80px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="badge" style="background: rgba(124, 255, 178, 0.05);">Full Scale Experience</span>
+                <h2 style="font-size: 3rem; margin-bottom: 15px;">Beyond the <span
+                        class="gradient-text">Hackathon</span></h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Immerse yourself in a complete
+                    tech festival experience designed to spark innovation across all domains.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <!-- Technical Events -->
+                <div class="glass" style="padding: 40px; border-radius: 24px; position: relative;">
+                    <div
+                        style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i data-lucide="binary" style="color: var(--primary-glow); width: 24px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Technical Events</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Coding competitions, hardware challenges,
+                        and engineering problem-solving contests that push your cognitive limits.</p>
+                    <div
+                        style="margin-top: 20px; font-size: 0.8rem; color: var(--primary-glow); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        Hardware + Logic</div>
+                </div>
+                <!-- Non-Technical Events -->
+                <div class="glass" style="padding: 40px; border-radius: 24px; position: relative;">
+                    <div
+                        style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i data-lucide="palette" style="color: var(--primary-glow); width: 24px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Non-Technical Events</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Fun, creativity, management, and
+                        interactive student engagement activities to showcase multi-faceted talent.</p>
+                    <div
+                        style="margin-top: 20px; font-size: 0.8rem; color: var(--primary-glow); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        Creativity + Fun</div>
+                </div>
+                <!-- Workshops -->
+                <div class="glass" style="padding: 40px; border-radius: 24px; position: relative;">
+                    <div
+                        style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i data-lucide="terminal" style="color: var(--primary-glow); width: 24px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Workshops</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Hands-on industry-focused sessions led by
+                        global experts to bridge the gap between academia and industry.</p>
+                    <div
+                        style="margin-top: 20px; font-size: 0.8rem; color: var(--primary-glow); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        Insight + Skill</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsorship Features -->
+    <section id="sponsorship">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <span class="badge">Sponsor Opportunities</span>
+            <h2 style="font-size: 3.5rem; margin-bottom: 20px;">What We Offer <span
+                    class="gradient-text">Sponsors</span></h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Partner with us to empower the next
+                generation of engineers and innovators.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="glass" style="padding: 40px; border-radius: 24px;">
+                <div
+                    style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i data-lucide="eye" style="color: var(--primary-glow);"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Brand Visibility</h3>
+                <p style="color: var(--text-muted);">Through event branding, digital outreach, and wide social media
+                    presence.</p>
+            </div>
+            <div class="glass" style="padding: 40px; border-radius: 24px;">
+                <div
+                    style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i data-lucide="monitor" style="color: var(--primary-glow);"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Product Showcase</h3>
+                <p style="color: var(--text-muted);">Demonstrate your technology and services to a highly tech-savvy
+                    student audience.</p>
+            </div>
+            <div class="glass" style="padding: 40px; border-radius: 24px;">
+                <div
+                    style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i data-lucide="code-2" style="color: var(--primary-glow);"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Industry Challenges</h3>
+                <p style="color: var(--text-muted);">Propose real-world problem statements and watch innovative
+                    solutions come to life.</p>
+            </div>
+            <div class="glass" style="padding: 40px; border-radius: 24px;">
+                <div
+                    style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i data-lucide="users" style="color: var(--primary-glow);"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Expert Interaction</h3>
+                <p style="color: var(--text-muted);">Engage as judges and mentors, influencing future industry leaders.
+                </p>
+            </div>
+            <div class="glass" style="padding: 40px; border-radius: 24px;">
+                <div
+                    style="width: 50px; height: 50px; background: rgba(34, 255, 136, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i data-lucide="network" style="color: var(--primary-glow);"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Strategic Networking</h3>
+                <p style="color: var(--text-muted);">Connect with department faculty, industry experts, and top-tier
+                    talent.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributions Expectation -->
+    <section>
+        <div style="display: flex; gap: 80px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 400px;">
+                <span class="badge">Engagement Model</span>
+                <h2 style="font-size: 3.5rem; margin-bottom: 24px;">What We <span class="gradient-text">Expect</span>
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">Sponsors can contribute to the success of
+                    ECO-TRONICS through various avenues:</p>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <i data-lucide="banknote" style="color: var(--primary-glow);"></i>
+                        <p style="color: var(--text-secondary);"><strong style="color: var(--text-primary);">Cash
+                                Sponsorship:</strong> For grand prizes and event operations.</p>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <i data-lucide="gift" style="color: var(--primary-glow);"></i>
+                        <p style="color: var(--text-secondary);"><strong
+                                style="color: var(--text-primary);">Goodies:</strong> Merch, coupons, and giveaways for
+                            participants.</p>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <i data-lucide="coffee" style="color: var(--primary-glow);"></i>
+                        <p style="color: var(--text-secondary);"><strong style="color: var(--text-primary);">Event
+                                Essentials:</strong> Food, lanyards, ID cards, and certificates.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px;" class="glass">
+                <div style="padding: 50px; text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;" class="gradient-text">500+</div>
+                    <p style="font-weight: 600; font-size: 1.2rem;">Expected Participants</p>
+                    <p style="color: var(--text-muted);">National Reach | Top Engineering Talent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Tiers -->
+    <section id="tiers">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <span class="badge">Sponsorship Tiers</span>
+            <h2 style="font-size: 3.5rem;">Join the <span class="gradient-text">Circle</span></h2>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: stretch;">
+            <!-- Title sponsor -->
+            <div class="glass tier-card highlight"
+                style="padding: 50px; border-radius: 24px; text-align: center; border: 2px solid var(--primary-glow); z-index: 2;">
+                <div
+                    style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--primary-glow); color: black; padding: 4px 15px; border-radius: 0 0 10px 10px; font-size: 0.75rem; font-weight: 800;">
+                    PREMIER PARTNER</div>
+                <h4 style="color: var(--primary-glow); margin-bottom: 10px;">TITLE SPONSOR</h4>
+                <h3 style="font-size: 3.5rem; margin-bottom: 0; line-height: 1;" class="gradient-text">₹5,00,000</h3>
+            </div>
+            <!-- Platinum -->
+            <div class="glass tier-card" style="padding: 40px; border-radius: 24px; text-align: center;">
+                <h4 style="color: #E5E4E2; margin-bottom: 10px;">PLATINUM</h4>
+                <h3 style="font-size: 2.5rem; margin-bottom: 0;">₹2,00,000</h3>
+            </div>
+            <!-- Gold -->
+            <div class="glass tier-card" style="padding: 40px; border-radius: 24px; text-align: center;">
+                <h4 style="color: #FFD700; margin-bottom: 10px;">GOLD</h4>
+                <h3 style="font-size: 2.5rem; margin-bottom: 0;">₹1,00,000</h3>
+            </div>
+            <!-- Co-Title -->
+            <div class="glass tier-card" style="padding: 40px; border-radius: 24px; text-align: center;">
+                <h4 style="color: var(--soft-mint); margin-bottom: 10px;">CO-TITLE</h4>
+                <h3 style="font-size: 2.5rem; margin-bottom: 0;">₹4,00,000</h3>
+            </div>
+            <!-- Diamond -->
+            <div class="glass tier-card" style="padding: 40px; border-radius: 24px; text-align: center;">
+                <h4 style="color: #B9F2FF; margin-bottom: 10px;">DIAMOND</h4>
+                <h3 style="font-size: 2.5rem; margin-bottom: 0;">₹3,00,000</h3>
+            </div>
+            <!-- Silver -->
+            <div class="glass tier-card" style="padding: 40px; border-radius: 24px; text-align: center;">
+                <h4 style="color: #C0C0C0; margin-bottom: 10px;">SILVER</h4>
+                <h3 style="font-size: 2.5rem; margin-bottom: 0;">₹50,000</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="glass"
+            style="padding: 60px; border-radius: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; border: 1px solid var(--glass-border-hover);">
+            <div>
+                <h2 style="font-size: 3rem; margin-bottom: 20px;">Get in <span class="gradient-text">Touch</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">Have questions about ECO-TRONICS? Reach
+                    out to our coordinators.</p>
+                <div style="display: flex; flex-direction: column; gap: 25px;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <i data-lucide="mail" style="color: var(--primary-glow);"></i>
+                        <a href="mailto:hod.ece.rmp@srmist.edu.in"
+                            style="color: var(--text-primary); text-decoration: none;">hod.ece.rmp@srmist.edu.in</a>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <div class="glass" style="padding: 30px; border-radius: 20px; background: rgba(34, 255, 136, 0.05);">
+                    <p
+                        style="color: var(--soft-mint); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px;">
+                        Faculty Coordinator</p>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 5px;">Dr. G. Ramya</h3>
+                    <p style="color: var(--text-primary);"><i data-lucide="phone"
+                            style="width: 16px; margin-right: 10px;"></i> +91 98407 66774</p>
+                </div>
+                <div class="glass" style="padding: 30px; border-radius: 20px; background: rgba(34, 255, 136, 0.05);">
+                    <p
+                        style="color: var(--soft-mint); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px;">
+                        Student Coordinator</p>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 5px;">Hitesh Ambhareesh A B</h3>
+                    <p style="color: var(--text-primary);"><i data-lucide="phone"
+                            style="width: 16px; margin-right: 10px;"></i> +91 78068 41556</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 80px 5%; border-top: 1px solid var(--glass-border); margin-top: 80px; text-align: center;">
+        <div class="logo"
+            style="justify-content: center; font-family: 'Outfit'; font-weight: 800; font-size: 2rem; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div
+                style="width: 40px; height: 40px; background: var(--primary-glow); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="cpu" style="color: black; width: 22px;"></i>
+            </div>
+            <span>ECO-<span class="gradient-text">TRONICS</span></span>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 40px;">Organized by Department of ECE | SRM IST Ramapuram</p>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px;">
+            <i data-lucide="instagram" class="nav-link" style="cursor: pointer;"></i>
+            <i data-lucide="twitter" class="nav-link" style="cursor: pointer;"></i>
+            <i data-lucide="linkedin" class="nav-link" style="cursor: pointer;"></i>
+        </div>
+        <div style="color: var(--text-muted); font-size: 0.85rem;">
+            © 2026 ECO-TRONICS. Innovation for a Sustainable Future.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
